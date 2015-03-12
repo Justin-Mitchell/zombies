@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ash:
+  id: 1
+  name: Ash
+  graveyard: Oak Park
+  
+tim:
+  id: 2, 
+  name: Tim
+  graveyard: Green Meadows
