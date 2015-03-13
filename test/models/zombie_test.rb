@@ -8,7 +8,7 @@ class ZombieTest < ActiveSupport::TestCase
     should have_many(:tweets)
   
   def setup
-     @z = zombies(:ash) 
+     @z = FactoryGirl.create(:armed_zombie, :status => 'dead')
   end
   
   test "valid with all attributes" do 

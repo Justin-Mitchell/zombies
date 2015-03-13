@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :zombie_id %><br>
-    <%= f.number_field :zombie_id %>
+    <%= f.select(:zombie_id, options_for_select([['Ash', "1"], ["Tim", "2"]])) %>
   </div>
   <div class="actions">
     <%= f.submit %>

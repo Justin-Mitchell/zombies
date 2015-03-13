@@ -1,0 +1,34 @@
+           Prefix Verb   URI Pattern                                   Controller#Action
+          weapons GET    /weapons(.:format)                            weapons#index
+                  POST   /weapons(.:format)                            weapons#create
+       new_weapon GET    /weapons/new(.:format)                        weapons#new
+      edit_weapon GET    /weapons/:id/edit(.:format)                   weapons#edit
+           weapon GET    /weapons/:id(.:format)                        weapons#show
+                  PATCH  /weapons/:id(.:format)                        weapons#update
+                  PUT    /weapons/:id(.:format)                        weapons#update
+                  DELETE /weapons/:id(.:format)                        weapons#destroy
+           tweets GET    /tweets(.:format)                             tweets#index
+                  POST   /tweets(.:format)                             tweets#create
+        new_tweet GET    /tweets/new(.:format)                         tweets#new
+       edit_tweet GET    /tweets/:id/edit(.:format)                    tweets#edit
+            tweet GET    /tweets/:id(.:format)                         tweets#show
+                  PATCH  /tweets/:id(.:format)                         tweets#update
+                  PUT    /tweets/:id(.:format)                         tweets#update
+                  DELETE /tweets/:id(.:format)                         tweets#destroy
+    zombie_tweets GET    /zombies/:zombie_id/tweets(.:format)          tweets#index
+                  POST   /zombies/:zombie_id/tweets(.:format)          tweets#create
+ new_zombie_tweet GET    /zombies/:zombie_id/tweets/new(.:format)      tweets#new
+edit_zombie_tweet GET    /zombies/:zombie_id/tweets/:id/edit(.:format) tweets#edit
+     zombie_tweet GET    /zombies/:zombie_id/tweets/:id(.:format)      tweets#show
+                  PATCH  /zombies/:zombie_id/tweets/:id(.:format)      tweets#update
+                  PUT    /zombies/:zombie_id/tweets/:id(.:format)      tweets#update
+                  DELETE /zombies/:zombie_id/tweets/:id(.:format)      tweets#destroy
+          zombies GET    /zombies(.:format)                            zombies#index
+                  POST   /zombies(.:format)                            zombies#create
+       new_zombie GET    /zombies/new(.:format)                        zombies#new
+      edit_zombie GET    /zombies/:id/edit(.:format)                   zombies#edit
+           zombie GET    /zombies/:id(.:format)                        zombies#show
+                  PATCH  /zombies/:id(.:format)                        zombies#update
+                  PUT    /zombies/:id(.:format)                        zombies#update
+                  DELETE /zombies/:id(.:format)                        zombies#destroy
+             root GET    /                                             zombies#index

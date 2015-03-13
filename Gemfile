@@ -55,24 +55,6 @@ group :development, :test do
   # stop execution and get a debugger console
   gem 'byebug'
   
-  # Provides Test::Unit and RSpec-compatible
-  # one-liners that test common Rails 
-  # functionality
-  # Read more: https://github.com/thoughtbot/shoulda
-  gem 'shoulda'
-  
-  # Integration testing tool for 
-  # rack based web applications. 
-  # Simulates user interactions.
-  # Read more: https://github.com/jnicklas/capybara
-  gem 'capybara'
-  
-  # A Ruby library for mocking and stubbing
-  # Unified, simple and readable syntax for
-  # both full & partial mocking.
-  # Read more: https://github.com/freerange/mocha
-  gem 'mocha'
-  
   # Access an IRB console on exception pages 
   # or by using <%= console %> in views
   # Read more: https://github.com/rails/web-console
@@ -87,5 +69,30 @@ group :development, :test do
   # your application running in the background. 
   # Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+    # Factory_girl is a fixtures replacement
+    # with straightforward definition syntax
+    # Read more: https://github.com/thoughtbot/factory_girl_rails
+    gem 'factory_girl_rails'
+    
+    # Provides Test::Unit and RSpec-compatible
+    # one-liners that test common Rails 
+    # functionality
+    # Read more: https://github.com/thoughtbot/shoulda
+    gem 'shoulda'
+  
+    # Integration testing tool for 
+    # rack based web applications. 
+    # Simulates user interactions.
+    # Read more: https://github.com/jnicklas/capybara
+    gem 'capybara'
+  
+    # A Ruby library for mocking and stubbing
+    # Unified, simple and readable syntax for
+    # both full & partial mocking.
+    # Read more: https://github.com/freerange/mocha
+    gem 'mocha'
 end
 

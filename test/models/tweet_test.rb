@@ -8,6 +8,11 @@ class TweetTest < ActiveSupport::TestCase
       @zombie = zombies(:ash)
   end
   
+  test "A tweet requires a status" do
+     tweet = FactoryGirl.build(:tweet, status: nil)
+     assert !tweet.valid?, "Status is not being validated" 
+  end
+  
   test "invalid without a status" do
      tweet = Tweet.new
      assert !tweet.valid?, "Tweet not being validated" 

@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @tweet.status %></h1>
+<div id='<%="tweet_#{@tweet.id}"%>'>
+  <h3><%= @tweet.zombie.name %></h3>
+  <p><%= @tweet.status %></p>
+</div>
 <p>
-  <strong>Status:</strong>
-  <%= @tweet.status %>
-</p>
-
-<p>
-  <strong>Zombie:</strong>
-  <%= @tweet.zombie_id %>
+    Posted by <%= link_to @tweet.zombie.name, zombie_tweets_path(@tweet.zombie) %>
 </p>
 
 <%= link_to 'Edit', edit_tweet_path(@tweet) %> |

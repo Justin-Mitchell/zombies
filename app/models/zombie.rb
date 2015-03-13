@@ -2,7 +2,7 @@ class Zombie < ActiveRecord::Base
     validates :name, presence: true, length: {within: 1..15}
     validates :graveyard, presence: true
     
-    has_many :tweets, :dependent => :destroy
+    has_many  :tweets
     has_one  :weapon
     
     def avatar_url
