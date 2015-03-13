@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+screwdriver:
   zombie_id: 1
-  name: MyString
+  name: "Stanley Stabber"
   damage: 1
 
-two:
+spoon:
   zombie_id: 1
-  name: MyString
-  damage: 1
+  name: "brain scooper"
+  damage: 3

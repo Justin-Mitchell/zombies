@@ -31,6 +31,18 @@ class TweetTest < ActiveSupport::TestCase
   end
   
   test "show_author_summary should set status to zombie summary" do
+     @tweet.zombie.stubs(:zombie_summary)
      @tweet.show_author_summary
+     assert_equal @tweet.zombie.zombie_summary, @tweet.status, 'tweet status does not contain zombie summary' 
+  end
+  
+  test "show_author_summary should call zombie_summary" do
+     @tweet.zombie.expects(:zombie_summary)
+     @tweet.show_author_summary
+  end
+  
+  test "status_image calls the ZwitPic get_status_image api" do
+     ZwitPic.stubs(:get_status_image).with(@tweet.id).returns(name: 'Hello brains', url: 'http://zwitpic.com/2.jpg')
+     assert_equal "<img src='http://zwitpic.com/2.jpg' alt='Hello brains'/>", @tweet.status_image
   end
 end

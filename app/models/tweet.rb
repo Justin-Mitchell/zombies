@@ -14,7 +14,7 @@ class Tweet < ActiveRecord::Base
     
     def status_image
        image = ZwitPic.get_status_image(self.id) # This is returning an array 
-       {image_name: image[0], image_url: image[1]}
+       "<img src='#{image[:url]}' alt='#{image[:name]}'/>".html_safe
     end
     
     

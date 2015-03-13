@@ -22,4 +22,9 @@ class Zombie < ActiveRecord::Base
        loc = Zoogle.graveyard_locator(self.graveyard)
        "#{loc[:latitude]}, #{loc[:longitude]}" 
     end
+    
+    def geolocate_with_object
+       loc = Zoogle.graveyard_locator(self.graveyard)
+       "#{loc.latitude}, #{loc.longitude}" 
+    end
 end
