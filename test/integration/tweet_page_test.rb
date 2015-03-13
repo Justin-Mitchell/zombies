@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class TweetPageTest < ActionDispatch::IntegrationTest
+    
     test "Should go to tweet page from index page" do
        tweet = FactoryGirl.create(:tweet)
        visit tweets_url
