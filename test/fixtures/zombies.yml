@@ -4,6 +4,7 @@ ash:
   id: 1
   name: Ash
   graveyard: Oak Park
+  status: "Watch out for Ash!"
   
 tim:
   id: 2, 

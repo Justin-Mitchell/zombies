@@ -1,34 +1,66 @@
-           Prefix Verb   URI Pattern                                   Controller#Action
-          weapons GET    /weapons(.:format)                            weapons#index
-                  POST   /weapons(.:format)                            weapons#create
-       new_weapon GET    /weapons/new(.:format)                        weapons#new
-      edit_weapon GET    /weapons/:id/edit(.:format)                   weapons#edit
-           weapon GET    /weapons/:id(.:format)                        weapons#show
-                  PATCH  /weapons/:id(.:format)                        weapons#update
-                  PUT    /weapons/:id(.:format)                        weapons#update
-                  DELETE /weapons/:id(.:format)                        weapons#destroy
-           tweets GET    /tweets(.:format)                             tweets#index
-                  POST   /tweets(.:format)                             tweets#create
-        new_tweet GET    /tweets/new(.:format)                         tweets#new
-       edit_tweet GET    /tweets/:id/edit(.:format)                    tweets#edit
-            tweet GET    /tweets/:id(.:format)                         tweets#show
-                  PATCH  /tweets/:id(.:format)                         tweets#update
-                  PUT    /tweets/:id(.:format)                         tweets#update
-                  DELETE /tweets/:id(.:format)                         tweets#destroy
-    zombie_tweets GET    /zombies/:zombie_id/tweets(.:format)          tweets#index
-                  POST   /zombies/:zombie_id/tweets(.:format)          tweets#create
- new_zombie_tweet GET    /zombies/:zombie_id/tweets/new(.:format)      tweets#new
-edit_zombie_tweet GET    /zombies/:zombie_id/tweets/:id/edit(.:format) tweets#edit
-     zombie_tweet GET    /zombies/:zombie_id/tweets/:id(.:format)      tweets#show
-                  PATCH  /zombies/:zombie_id/tweets/:id(.:format)      tweets#update
-                  PUT    /zombies/:zombie_id/tweets/:id(.:format)      tweets#update
-                  DELETE /zombies/:zombie_id/tweets/:id(.:format)      tweets#destroy
-          zombies GET    /zombies(.:format)                            zombies#index
-                  POST   /zombies(.:format)                            zombies#create
-       new_zombie GET    /zombies/new(.:format)                        zombies#new
-      edit_zombie GET    /zombies/:id/edit(.:format)                   zombies#edit
-           zombie GET    /zombies/:id(.:format)                        zombies#show
-                  PATCH  /zombies/:id(.:format)                        zombies#update
-                  PUT    /zombies/:id(.:format)                        zombies#update
-                  DELETE /zombies/:id(.:format)                        zombies#destroy
-             root GET    /                                             zombies#index
+               Prefix Verb   URI Pattern                                   Controller#Action
+    api_zombie_tweets GET    /zombies/:zombie_id/tweets(.:format)          api/tweets#index {:subdomain=>"api"}
+                      POST   /zombies/:zombie_id/tweets(.:format)          api/tweets#create {:subdomain=>"api"}
+ new_api_zombie_tweet GET    /zombies/:zombie_id/tweets/new(.:format)      api/tweets#new {:subdomain=>"api"}
+edit_api_zombie_tweet GET    /zombies/:zombie_id/tweets/:id/edit(.:format) api/tweets#edit {:subdomain=>"api"}
+     api_zombie_tweet GET    /zombies/:zombie_id/tweets/:id(.:format)      api/tweets#show {:subdomain=>"api"}
+                      PATCH  /zombies/:zombie_id/tweets/:id(.:format)      api/tweets#update {:subdomain=>"api"}
+                      PUT    /zombies/:zombie_id/tweets/:id(.:format)      api/tweets#update {:subdomain=>"api"}
+                      DELETE /zombies/:zombie_id/tweets/:id(.:format)      api/tweets#destroy {:subdomain=>"api"}
+          api_zombies GET    /zombies(.:format)                            api/zombies#index {:subdomain=>"api"}
+                      POST   /zombies(.:format)                            api/zombies#create {:subdomain=>"api"}
+       new_api_zombie GET    /zombies/new(.:format)                        api/zombies#new {:subdomain=>"api"}
+      edit_api_zombie GET    /zombies/:id/edit(.:format)                   api/zombies#edit {:subdomain=>"api"}
+           api_zombie GET    /zombies/:id(.:format)                        api/zombies#show {:subdomain=>"api"}
+                      PATCH  /zombies/:id(.:format)                        api/zombies#update {:subdomain=>"api"}
+                      PUT    /zombies/:id(.:format)                        api/zombies#update {:subdomain=>"api"}
+                      DELETE /zombies/:id(.:format)                        api/zombies#destroy {:subdomain=>"api"}
+           api_tweets GET    /tweets(.:format)                             api/tweets#index {:subdomain=>"api"}
+                      POST   /tweets(.:format)                             api/tweets#create {:subdomain=>"api"}
+        new_api_tweet GET    /tweets/new(.:format)                         api/tweets#new {:subdomain=>"api"}
+       edit_api_tweet GET    /tweets/:id/edit(.:format)                    api/tweets#edit {:subdomain=>"api"}
+            api_tweet GET    /tweets/:id(.:format)                         api/tweets#show {:subdomain=>"api"}
+                      PATCH  /tweets/:id(.:format)                         api/tweets#update {:subdomain=>"api"}
+                      PUT    /tweets/:id(.:format)                         api/tweets#update {:subdomain=>"api"}
+                      DELETE /tweets/:id(.:format)                         api/tweets#destroy {:subdomain=>"api"}
+          api_weapons GET    /weapons(.:format)                            api/weapons#index {:subdomain=>"api"}
+                      POST   /weapons(.:format)                            api/weapons#create {:subdomain=>"api"}
+       new_api_weapon GET    /weapons/new(.:format)                        api/weapons#new {:subdomain=>"api"}
+      edit_api_weapon GET    /weapons/:id/edit(.:format)                   api/weapons#edit {:subdomain=>"api"}
+           api_weapon GET    /weapons/:id(.:format)                        api/weapons#show {:subdomain=>"api"}
+                      PATCH  /weapons/:id(.:format)                        api/weapons#update {:subdomain=>"api"}
+                      PUT    /weapons/:id(.:format)                        api/weapons#update {:subdomain=>"api"}
+                      DELETE /weapons/:id(.:format)                        api/weapons#destroy {:subdomain=>"api"}
+              weapons GET    /weapons(.:format)                            weapons#index
+                      POST   /weapons(.:format)                            weapons#create
+           new_weapon GET    /weapons/new(.:format)                        weapons#new
+          edit_weapon GET    /weapons/:id/edit(.:format)                   weapons#edit
+               weapon GET    /weapons/:id(.:format)                        weapons#show
+                      PATCH  /weapons/:id(.:format)                        weapons#update
+                      PUT    /weapons/:id(.:format)                        weapons#update
+                      DELETE /weapons/:id(.:format)                        weapons#destroy
+               tweets GET    /tweets(.:format)                             tweets#index
+                      POST   /tweets(.:format)                             tweets#create
+            new_tweet GET    /tweets/new(.:format)                         tweets#new
+           edit_tweet GET    /tweets/:id/edit(.:format)                    tweets#edit
+                tweet GET    /tweets/:id(.:format)                         tweets#show
+                      PATCH  /tweets/:id(.:format)                         tweets#update
+                      PUT    /tweets/:id(.:format)                         tweets#update
+                      DELETE /tweets/:id(.:format)                         tweets#destroy
+        zombie_tweets GET    /zombies/:zombie_id/tweets(.:format)          tweets#index
+                      POST   /zombies/:zombie_id/tweets(.:format)          tweets#create
+     new_zombie_tweet GET    /zombies/:zombie_id/tweets/new(.:format)      tweets#new
+    edit_zombie_tweet GET    /zombies/:zombie_id/tweets/:id/edit(.:format) tweets#edit
+         zombie_tweet GET    /zombies/:zombie_id/tweets/:id(.:format)      tweets#show
+                      PATCH  /zombies/:zombie_id/tweets/:id(.:format)      tweets#update
+                      PUT    /zombies/:zombie_id/tweets/:id(.:format)      tweets#update
+                      DELETE /zombies/:zombie_id/tweets/:id(.:format)      tweets#destroy
+              zombies GET    /zombies(.:format)                            zombies#index
+                      POST   /zombies(.:format)                            zombies#create
+           new_zombie GET    /zombies/new(.:format)                        zombies#new
+          edit_zombie GET    /zombies/:id/edit(.:format)                   zombies#edit
+               zombie GET    /zombies/:id(.:format)                        zombies#show
+                      PATCH  /zombies/:id(.:format)                        zombies#update
+                      PUT    /zombies/:id(.:format)                        zombies#update
+                      DELETE /zombies/:id(.:format)                        zombies#destroy
+                 root GET    /                                             tweets#index

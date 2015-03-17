@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+    
+    namespace :api, path: '/', constraints: { subdomain: 'api' } do
+      resources :zombies do
+          resources :tweets
+      end
+      resources :tweets 
+      resources :weapons
+   end 
   
   resources :weapons
 
